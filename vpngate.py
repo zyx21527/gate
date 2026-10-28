@@ -197,8 +197,8 @@ def parse_mirror_json(data):
             servers.extend(item["servers"])
         elif isinstance(item, dict):
             servers.append(item)
-    rows = []
-  for item in servers:
+    rows = []    
+        for item in servers:
         host = str(s.get("hostname") or s.get("host") or "").strip()
         ip = str(s.get("ip") or "").strip()
         if not host or not ip: continue
